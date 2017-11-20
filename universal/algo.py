@@ -277,7 +277,7 @@ class Algo(object):
         n_jobs = kwargs.pop('n_jobs', -1)
 
         # extract simple parameters
-        simple_params = {k: kwargs.pop(k) for k, v in kwargs.items()
+        simple_params = {k: kwargs.pop(k) for k, v in list(kwargs.items())
                          if not isinstance(v, list)}
 
         # iterate over all combinations

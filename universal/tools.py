@@ -324,6 +324,7 @@ def mc_simplex(d, points):
     :param d: Number of dimensions.
     :param points: Total number of points.
     """
+    points = int(points)
     a = np.sort(np.random.random((points, d)))
     a = np.hstack([np.zeros((points,1)), a, np.ones((points,1))])
     return np.diff(a)
